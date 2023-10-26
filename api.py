@@ -2,7 +2,6 @@ import requests
 import time
 from secret import API_KEY
 
-
 upload_endpoint = 'https://api.assemblyai.com/v2/upload'
 transcript_endpoint = 'https://api.assemblyai.com/v2/transcript'
 
@@ -15,7 +14,6 @@ headers = {
 
 CHUNK_SIZE = 5_242_880  # 5MB
 
-
 def upload(filename):
     def read_file(filename):
         with open(filename, 'rb') as f:
@@ -27,7 +25,6 @@ def upload(filename):
 
     upload_response = requests.post(upload_endpoint, headers=headers_auth_only, data=read_file(filename))
     return upload_response.json()['upload_url']
-
 
 def transcribe(audio_url):
     transcript_request = {

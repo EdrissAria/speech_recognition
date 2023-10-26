@@ -1,0 +1,2 @@
+https://www.assemblyai.com/blog/real-time-speech-recognition-with-python/
+https://github.com/AssemblyAI-Examples/python-speech-recognition-course
