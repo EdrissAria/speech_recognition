@@ -40,7 +40,6 @@ def poll(transcript_id):
     polling_response = requests.get(polling_endpoint, headers=headers)
     return polling_response.json()
 
-
 def get_transcription_result_url(url):
     transcribe_id = transcribe(url)
     while True:
@@ -52,8 +51,7 @@ def get_transcription_result_url(url):
             
         print("waiting for 30 seconds")
         time.sleep(30)
-        
-        
+                
 def save_transcript(url, title):
     data, error = get_transcription_result_url(url)
     

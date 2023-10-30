@@ -1,7 +1,7 @@
 from api import *
 
-filename = input("enter the audio file name: ")
-filetitle = filename.split(".")[0]
-audio_url = upload(filename)
+file = input("enter the audio file name: ")
+filetitle = file.split(".")[0]
+audio_url = upload(file)
 
 save_transcript(audio_url, filetitle)

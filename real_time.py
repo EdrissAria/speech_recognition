@@ -50,7 +50,6 @@ async def send_receive():
                except Exception as e:
                    assert False, "Not a websocket 4008 error"
                await asyncio.sleep(0.01)
-          
            return True
       
        async def receive():
